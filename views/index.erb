@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page Users</title>
+    <style>
+        td, th {
+            border: 2px solid black;
+            padding: 6px;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: 
+        }
+    </style>
+</head>
+<body>
+    <h1>Users</h1>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+
+        <% @users.each do |user| %>
+            <tr>
+                <td><%= user['firstname'] %></td>
+                <td><%= user['lastname'] %></td>
+                <td><%= user['age'] %></td>
+                <td><%= user['email'] %></td>
+            </tr>
+        <% end %>
+    </table>
+</body>
+</html>
